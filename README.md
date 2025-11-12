@@ -4,8 +4,6 @@
 O varejo opera com milhares de SKUs em dezenas de lojas. O principal dilema é equilibrar **ruptura** (perda de venda e imagem) versus **excesso de estoque** (capital imobilizado e custo de armazenagem). 
 Utilizaremos os **dados reais do M5 (Walmart)**: vendas diárias por SKU/loja, calendário com feriados/eventos e histórico de preços.
 
-## Problema de negócio
-Como **prever a demanda dos próximos 28 dias** por SKU/loja e, a partir disso, **definir políticas de estoque** que reduzam rupturas e minimizem custo?
 
 ## Dados utilizados
 - `sales_train_validation.csv`: vendas diárias (30k+ SKUs)  
@@ -13,12 +11,6 @@ Como **prever a demanda dos próximos 28 dias** por SKU/loja e, a partir disso, 
 - `sell_prices.csv`: preço por SKU/loja/semana  
 *(Fonte: Kaggle – M5 Forecasting – Accuracy)*
 
-## Objetivo do projeto
-1) Construir um **modelo de previsão T+28** por SKU/loja (XGBoost/LightGBM).  
-2) Traduzir a previsão em **política de estoque**:
-   - **Safety Stock (SS)** para nível de serviço desejado;  
-   - **EOQ** (Economic Order Quantity) para tamanho de lote;  
-   - Sinalizar **risco de ruptura** e impacto financeiro.
 
 ## Hipóteses principais
 - H1: Preço e eventos (feriados/promoções) **explicam parte relevante** da variação da demanda.  
